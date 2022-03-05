@@ -5,8 +5,8 @@ const app = express();
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
-
-
+app.use();
+app.use();
 
 
 app.listen(PORT, () => {
