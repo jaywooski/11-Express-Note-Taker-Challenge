@@ -4,12 +4,12 @@ const db = require('../../db/db.json');
 // const { getNotes, saveNote, deleteNote } = require('../../public/assets/js/index')
 
 router.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../../public/notes.html'))
+    res.sendFile(path.join(__dirname, '../../public/notes.html'))
 
 })
 
 router.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './Develop/public/index.html'))
+    res.sendFile(path.join(__dirname, '../../public/index.html'))
 
 })
 

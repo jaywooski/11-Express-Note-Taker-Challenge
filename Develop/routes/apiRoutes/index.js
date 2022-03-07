@@ -1,7 +1,8 @@
 const path = require('path');
 const router = require('express').Router();
-const { getNotes, saveNote, deleteNote } = require('../../public/assets/js/index')
+// const { getNotes, saveNote, deleteNote } = require('../../public/assets/js/index')
 const db = require('../../db/db.json');
+const fs = require('fs');
 
 
 // get api/notes ... should read db.json file and return all saved
@@ -18,15 +19,15 @@ router.get('/notes', (req, res) => {
 // POST api/notes should recieve new note as req.body, add to db.json
 // file and return the new note to the client
 router.post('/notes', (req, res) => {
-    let data = db;
+    const data = db;
     let text = req.body;
-    text.id = data.length.toString();
+    text.id = data.length;
 
     if (text) {
         data.push(text);
         fs.writeFileSync(
-            path.join(__dirname, './db/db.json'),
-            JSON.stringify({ text: data}, null, 2)
+            path.join(__dirname, '../../db/db.json'),
+            JSON.stringify( { text : data }, null, 2)
         );
         return text;
     } 
