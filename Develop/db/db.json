@@ -1,13 +1,26 @@
-{
-  "text": [
-    {
-      "title": "Test Title",
-      "text": "Test text"
-    },
-    {
-      "title": "hi",
-      "text": "hey",
-      "id": 1
-    }
-  ]
-}
+[
+  {
+    "title": "Test Title",
+    "text": "Test text"
+  },
+  {
+    "title": "hi",
+    "text": "hello",
+    "id": 2
+  },
+  {
+    "title": "hey",
+    "text": "sup",
+    "id": 3
+  },
+  {
+    "title": "hey,",
+    "text": "whats up",
+    "id": 4
+  },
+  {
+    "title": "Hey, ",
+    "text": "Sup?",
+    "id": 5
+  }
+]
