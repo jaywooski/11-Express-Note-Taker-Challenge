@@ -45,9 +45,10 @@ router.delete('/notes/:id', (req, res) => {
     if(noteId <= data.length) {
         
         const result = data.filter(note => note.id != noteId);
-        const decreaseId = function(array) {
-            const setIdToNoteId = (id) => id == noteId; 
-            index =  array.findIndex(setIdToNoteId(array.id));
+        const decreaseId = function(array, id) {
+            id == noteId; 
+            // if id == noteId, find index. Every object from that index on out, update id by -1;
+            index =  array.findIndex();
             for(i=index; i <= array.length; i++){
                 array[i].id -= 1;
             }
