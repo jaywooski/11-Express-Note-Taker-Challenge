@@ -45,17 +45,19 @@ router.delete('/notes/:id', (req, res) => {
     
     if(noteId) {
         
-        const result = data.filter(note => note.id != noteId);
+        const result = data.filter(note => note.id !== noteId);
         fs.writeFileSync(
             path.join(__dirname, '../../db/db.json'),
-            JSON.stringify( data , null, 2)
+            JSON.stringify( result , null, 2)
+            // data, null, 2
         );
         res.json(result);
         
     }
     else {
         res.sendStatus(404);
-    }   
+    }
+    
 })
 
 router.get('/notes/:id', (req, res) => {
